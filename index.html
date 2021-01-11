@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Utilisation de tout l'espace disponible pour les mobiles, sans zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>ODSE</title>
+    <!-- déclaration du fichier CSS de Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/anime.min.js"></script>
+
+    <script>
+        $(window).scroll(function() {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 575);
+        });
+    </script>
+
+    <script>
+        let letters = document.getElementsByClassName('title-letter');
+
+        setTimeout(() => {
+            for (let i = 0; i < letters.length; i++) {
+                anime({
+                    targets: letters[i],
+                    easing: 'easeInQuad',
+                    translateX: ['5px', '0'],
+                    delay: 50 * i
+                });
+
+                anime({
+                    targets: letters[i],
+                    easing: 'easeInQuad',
+                    opacity: 1,
+                    delay: 60 * i,
+                    complete: function(anim) {
+                        if (i === letters.length - 1) {
+                            showSubTitle()
+                        }
+                    }
+                });
+            }
+        }, 500);
+
+    </script>
+</head>
+
+<body>
+
+
+
+    <!--Début header-->
+    <header>
+        <!--Début navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <!--Menu burger-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="pages/missions.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Missions
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="pages/missions.html">Missions</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="pages/exploration-detail.html">Exploration</a>
+                                <a class="dropdown-item" href="pages/research.html">Research</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="nav-item nav-link active" href="pages/team.html">Team <span class="sr-only">(current)</span></a>
+                    <a class="nav-item" href="index.html">
+                        <img src="Images/logoODSEtransparent.png" alt="" title="" width="50" height="50">
+                    </a>
+                    <a class="nav-item nav-link active" href="pages/Equipement.html">Equipements</a>
+                    <a class="nav-item nav-link active" href="pages/contact.html">Contact us</a>
+                </div>
+            </div>
+        </nav>
+        <!--Fin navbar-->
+    </header>
+    <!--Fin header-->
+    <!--Texte sur le header-->
+    <div class="texte texte-index">
+        <div class="slider">
+            <div class="content slidercontentindex headertexteindex">
+                <h1 class="hero">
+                    <span id="titleindex">
+                        <span class="title-letter">O</span>
+                        <span class="title-letter">D</span>
+                        <span class="title-letter">S</span>
+                        <span class="title-letter">E</span>
+                    </span>
+                </h1>
+                <h2 class="hero"><q>Never Stop Exploring</q></h2>
+                <button type="button" class="btn-index"><a href="#main" class="span">Discover</a></button>
+            </div>
+        </div>
+    </div>
+    <!--Fin header-->
+
+
+    <main id="main">
+
+        <h2> Why we do that ? </h2>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-between presentation-index">
+                    <div class="col-lg-4 col-md-2">
+                        <figure>
+                            <div>
+                                <div class="box blury-card">
+                                    <img src="Images/Index/petiteFilleAquarium.jpg" alt="little girl in front of an aquarium">
+                                    <div class="frame">
+                                        <h4>Learning</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <!--<div class="col-lg-4">
+                        <figure><img src="images/caroline-hernandez-yl1wEVqEY8k-unsplash.jpg" alt="" title="" width="350" height="200" dfsrc="#">
+                        </figure>
+                    </div>-->
+                    <div class="col-lg-8 col-md-10 justify-content text-justify">
+                        <p> Passing the knowledge and inspiring the youth is one of our core values. We want the children to understand the beauty and the magic which represent water. Therefore, we are setting up several projects for this. We are giving speeches to schools, in front of classes. From first grade to senior year of highschool. We are also transparent with our functioning system. As soon as it is possible, we publish videos of our work, our studies with accessible (easily understood) explanations. Twice a year, we also welcome the public in our office to help them understand our purpose, to help them discovering what we are doing everyday and how we work. We love to believe that it creates vocations, it motivates them to help our planet. Additionally, every year, we accept students to do an observational internship. It is essential for children to become aware how lucky they are to live near the ocean. They must have the opportunity to discover a whole new world.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-between presentation-index">
+                    <div class="col-lg-8 justify-content text-justify">
+
+                        <p> We are not only discovering the secrets that the ocean wants to tell us. We are also protecting it. In a world where pollution continues to increase, the nature is even more in danger. If it abandons us, it will drag us down too. Thus, we are carrying out studies about multiple subjects with the same theme : the undersea depths. We believe it is important to bring awareness, to wake up our consciousness about this. Going to the beach must not become a mirage, a construct of our mind. In our turn, we want to protect the sea and its treasures. Save it a sad fate. </p>
+                    </div>
+
+                    <figure>
+                        <div>
+                            <div class="box blury-card">
+                                <img src="images/Index/recifMauve.jpg" alt="recif">
+                                <div class="frame">
+                                    <h4>Research</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+
+
+                    <!--<div class="col-lg-4">
+                        <figure><img src="images/sgr-s23xDAYQBCo-unsplash.jpg" alt="" title="" width="350" height="200" dfsrc="#">
+                        </figure>
+                    </div>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-between presentation-index">
+                    <div class="col-lg-4">
+
+
+                        <figure>
+                            <div>
+                                <div class="box blury-card">
+                                    <img src="images/Index/sunsetBateauAbandonne.jpg" alt="sunset boat">
+                                    <div class="frame">
+                                        <h4>Exploration</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+
+
+                        <!--<figure><img src="images/matin-tavazoei-mm5Nm9GMqDs-unsplash.jpg" alt="" title="" width="350" height="200" dfsrc="#">
+                        </figure>-->
+                    </div>
+                    <div class="col-lg-8 justify-content text-justify">
+                        <p> Why exploring ? Exploration is a way to reconnect with the past. To try to understand what happened. It is an approach to discover history. We like to lead investigations, find a clue and trace an event. Unravelling the ocean, discovering every of its secrets, it’s one of our passions which animate us. There’s nothing more rewarding than finding a shipwreck after long weeks of searching and twist thinking. We investigate every single day with one goal : to understand. We want to comprehend what happened, we want to know how it happened. For us, it is important to highlight the sweet and sour secret stories of the sea. Bringing to light what some of us didn’t imagine. Like a testimony from the past, a warning message. The ocean is the king, and paid no heed to humans, when he feels like it, he takes back his rights and his power.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--Début footer-->
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <p> <a href="pages/mentionslegales.html"> Mentions légales</a></p>
+                <p><a href="pages/mentionslegales.html"> Questions ?</a> </p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <p> Sunset Beach </p>
+                <p> Pūpūkea, Hawaï 96712 - USA </p>
+                <p> © all rights reserved </p>
+            </div>
+            <div class="col-lg-1 text-center">
+                <a href="https://twitter.com/odse15" target="_blank"><img class="imgfooter" src="images/Footer/twitter.png" width="48" height="58" alt="twitter" /></a>
+            </div>
+            <div class="col-lg-1 text-center">
+                <a href="https://www.instagram.com/_odse_/?hl=fr" target="_blank"><img class="imgfooter" src="images/Footer/instagram.png" width="48" height="48" alt="instagram" /></a>
+            </div>
+            <div class="col-lg-1 text-center">
+                <a href="mailto:odse.company22@gmail.com" target="_blank"><img class="imgfooter" src="images/Footer/mail.png" width="48" height="48" alt="mail" /></a>
+
+            </div>
+        </div>
+    </footer>
+    <!--Fin footer-->
+</body>
+
+</html>

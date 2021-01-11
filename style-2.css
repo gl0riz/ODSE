@@ -1,0 +1,270 @@
+/*CSS commun à toutes les pages*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/*Bannière ODSE*/
+
+/*Pour l'image de fond*/
+.texte {
+    width: 100%;
+    height: 800px;
+    background-image: url(images/bateau_recherche.jpg);
+    background-size: cover;
+}
+
+/*Pour le texte*/
+.content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Roboto, 'Open Sans', Arial, sans-serif;
+    overflow: hidden;
+    padding-top: 680px;
+}
+
+/*Navbar*/
+.bg-dark {
+    background: transparent !important;
+    transition: 0.5s ease;
+}
+
+.bg-dark.scrolled {
+    background: #293848 !important;
+}
+
+/*Header*/
+header {
+    line-height: 50px;
+    /*Epaisseur de la navbar*/
+    width: 100%;
+    transition: line-height 0.2s linear, box-shadow 0.2s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(245, 245, 245, 0.97);
+}
+
+/*Alignement du texte de la bannière*/
+.slidercontent {
+    text-align: left;
+}
+
+.hero {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #0D0D30;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+h1 .hero {
+    margin-top: 60px;
+    font-size: 54px;
+}
+
+#title {
+    font-weight: 700;
+    display: inline-flex;
+    margin: -5px;
+    padding: 5px;
+}
+
+.title-letter {
+    font-size: calc(6vw + 1rem);
+    margin-left: -2px;
+}
+
+/*Bouton discover*/
+.btn {
+    border: 1px solid #0D0D30;
+    color: #0D0D30;
+    font-variant: small-caps;
+    cursor: pointer;
+    align-content: center;
+    align-items: center;
+}
+
+.btn:hover,
+.btn:active {
+    background: #0D0D30;
+    color: white;
+}
+
+a .btn {
+    color: #0D0D30;
+}
+
+a:hover .btn,
+a:active .btn,
+a:focus .btn {
+    outline: none;
+    color: white;
+}
+
+
+/*Text*/
+.content > h1:not(.hero) {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/*Forme des textes*/
+p {
+    text-align: justify;
+}
+
+/*Responsive*/
+
+@media all and (max-width: 768px) {
+    .content {
+        width: 95%;
+    }
+
+    header {
+        height: auto;
+        background: #eee;
+    }
+
+    ul nav {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .content {
+        width: 750px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .content {
+        width: 970px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .content {
+        width: 1078px;
+    }
+}
+
+/*CSS different according to pages*/
+
+/*Page Researches*/
+.searching{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/*Page team*/
+.features-image img {
+    width: 100%;
+}
+
+.card {
+    background-color: $card-bg;
+    padding: 2rem;
+
+    &:before {
+        content: '';
+        display: block;
+        width: $caret-size;
+        height: $caret-size;
+        background-color: $card-bg;
+        position: absolute;
+        transform: rotate(45deg);
+        bottom: #{-$caret-size * 0.5};
+    }
+}
+
+@media (min-width: 768px) {
+
+    .features-image img {
+        box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.3);
+        width: 100%;
+        display: block;
+    }
+
+    #features {
+        padding: 2rem;
+    }
+    @media (min-width: 600px) {
+        #features {
+            padding: 5rem;
+        }
+    }
+
+    .features-group {
+        background: rgba(158, 216, 157, 0.3);
+        margin-bottom: 4rem;
+    }
+
+    @media (min-width: 1200px) {
+        .features-group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 8rem;
+        }
+    }
+
+    .features-group:last-child {
+        margin-bottom: 0;
+    }
+
+    .features-image img {
+        box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.3);
+        width: 100%;
+        display: block;
+    }
+
+    @media (min-width: 1200px) {
+        .features-image {
+            grid-row: 1;
+            grid-column: 1 / 3;
+            transform: scale(1.2);
+            margin: 0 2rem;
+            align-self: center;
+        }
+
+        .features-image.inverted {
+            grid-column: 3 / span 2;
+        }
+    }
+
+    .features-text {
+        padding: 2rem;
+    }
+
+    .features-text h1,
+    .features-text p {
+        color: #444;
+    }
+
+    .features-text p {
+        line-height: 1.5;
+        font-size: 1.2rem;
+    }
+
+    @media (min-width: 1200px) {
+        .features-text {
+            grid-column: 3 / span 2;
+            grid-row: 1;
+            padding: 3rem 3rem 3rem 6rem;
+            place-self: center;
+        }
+
+        .features-text.inverted {
+            grid-column: 1 / span 2;
+            padding: 3rem 6rem 3rem 3rem;
+        }
+    }
+

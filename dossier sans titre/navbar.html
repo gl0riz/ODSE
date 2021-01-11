@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <meta charset="utf-8">
+    <!-- Utilisation de tout l'espace disponible pour les mobiles, sans zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>ODSE</title>
+    <!-- déclaration du fichier CSS de Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 575);
+        });
+
+    </script>
+</head>
+<header>
+
+        <!--Début navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Missions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="pages/exploration.html">Exploration</a>
+                            <a class="dropdown-item" href="pages/ressearch.html">Ressearch</a>
+                        </div>
+                    </li>
+                    <a class="nav-item nav-link active" href="pages/team.html">Team <span class="sr-only">(current)</span></a>
+                    <a class="nav-item" href="index.html">
+                        <img src="images/logoODSEtransparent.png" alt="" title="" width="50" height="50" dfsrc="#">
+                    </a>
+                    <a class="nav-item nav-link active" href="pages/equipement.html">Equipements</a>
+                    <a class="nav-item nav-link active" href="pages/contact.html">Contact us</a>
+                </div>
+            </div>
+        </nav>
+        <!--Fin navbar-->
+    </header>
+    <!--Fin header-->
